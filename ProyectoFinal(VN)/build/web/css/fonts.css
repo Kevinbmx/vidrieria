@@ -1,0 +1,94 @@
+@font-face {
+	font-family: 'HelveticaNeue';
+	font-style: normal;
+	font-weight: normal;
+	src: local('HelveticaNeue'), local('Helvetica Neue'), url('fonts/helvetica-neue-regular.ttf') format('woff');
+}
+
+@font-face {
+	font-family: 'HelveticaNeue';
+	font-style: normal;
+	font-weight: bold;
+	src: local('HelveticaNeue Bold'), local('HelveticaNeue Bold'), url('fonts/helvetica-neue-bold.ttf') format('woff');
+}
+
+
+
+@font-face {
+	font-family: 'HelveticaNeue CondensedBold';
+	src: url('fonts/HelveticaNeue-CondensedBold.eot');
+	src: local('.'), url('fonts/HelveticaNeue-CondensedBold.woff') format('woff'), url('fonts/HelveticaNeue-CondensedBold.ttf') format('truetype'), url('fonts/HelveticaNeue-CondensedBold.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'comesinhandy';
+	/*src: url('fonts/Lobster_1.3.eot');*/
+	src: local('.'), url('fonts/comesinhandy.ttf') format('ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+@font-face{
+	font-family: 'BILLYARGELTRIAL';
+	font-style: normal;
+	font-weight: normal;
+	src:local('BILLYARGELTRIAL___'),url('fonts/BILLYARGELTRIAL___.otf');
+}
+
+
+@font-face{
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: bold;
+	src:local('Montserrat-Bold'),url('fonts/Montserrat-Bold.ttf');
+}
+
+
+@font-face{
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight:normal;
+	src:local('Montserrat-Regular'),url('fonts/Montserrat-Regular.ttf');
+}
+
+@font-face {
+	font-family: 'Lobster';
+	src: url('fonts/Lobster_1.3.eot');
+	src: local('.'), url('fonts/Lobster_1.3.woff') format('woff'), url('fonts/Lobster_1.3.ttf') format('truetype'), url('fonts/Lobster_1.3.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Impact';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Impact'), local('Impact Neue'), url('fonts/Impact.ttf') format('ttf');
+}
+
+
+
+/*----------------------*/
+@font-face{
+	font-family: 'JosefinSans';
+	font-style: normal;
+	font-weight:normal;
+	src:local('JosefinSans-Regular'),url('fonts/JosefinSans-Regular.ttf');
+}
+
+@font-face{
+	font-family: 'JosefinSans';
+	font-style: normal;
+	font-weight:bold;
+	src:local('JosefinSans-Bold'),url('fonts/JosefinSans-Bold.ttf');
+}
+
+@font-face{
+	font-family: 'JosefinSans';
+	font-style: normal;
+	font-weight:lighter;
+	src:local('JosefinSans-Light'),url('fonts/JosefinSans-Light.ttf');
+}
