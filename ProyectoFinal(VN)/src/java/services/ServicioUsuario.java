@@ -1,25 +1,15 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package Servicio;
+package services;
 
 import dao.UsuarioDao;
 import dto.Usuario;
 import factory.FactoryDao;
-import javax.enterprise.inject.Produces;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.FormParam;
-import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
-/**
- *
- * @author kevin
- */
 @Path("/usuario")
 public class ServicioUsuario {
 
@@ -43,12 +33,25 @@ public class ServicioUsuario {
         String jsonObject = "{"
                 + "'usuarioId' : " + usuario.getUsuarioId() + ","
                 + "'nombreCompleto' : '" + usuario.getNombreCompleto() + "',"
-                + "'nombreUsuario' : " + usuario.getNombreUsuario()+"',"
-                + "'direccion' : "+usuario.getDireccion()
-                + "}";
+                + "'nombreUsuario' : '" + usuario.getNombreUsuario() + "',"
+                + "'direccion' : '" + usuario.getDireccion()
+                + "'}";
 
         return new SimpleResponse(true, jsonObject);
 
     }
 
+    @POST
+    @Path("/login")
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    public SimpleResponse insertarUsuario(Usuario objUsuario) {
+        UsuarioDao dao = FactoryDao.getFactoryInstance().getNewUsuarioDao();
+        try {
+            dao.insert(objUsuario);
+        } catch (Exception ex) {
+            return new SimpleResponse(false, "Error al insertar el usuario");
+        }
+        return new SimpleResponse();
+    }
 }

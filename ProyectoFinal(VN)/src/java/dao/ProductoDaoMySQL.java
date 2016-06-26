@@ -5,10 +5,6 @@ import dto.Producto;
 import java.util.ArrayList;
 import java.sql.ResultSet;
 
-/**
- *
- * @author Jose Carlos Gutierrez
- */
 public class ProductoDaoMySQL extends ProductoDao {
 
     @Override
@@ -16,14 +12,14 @@ public class ProductoDaoMySQL extends ProductoDao {
         Conexion objConexion = Conexion.getOrCreate();
 
         int id = 0;
-        StringBuilder query = new StringBuilder("INSERT INTO producto (nombre,descripcion,precio,categoriaId,imagen) VALUE (");
-//			query.append("'" + obj.getProductoId() + "'," );
-        query.append("'" + obj.getNombre() + "',");
-        query.append("'" + obj.getDescripcion() + "',");
-        query.append("'" + obj.getPrecio() + "',");
-        query.append("'" + obj.getCategoriaId() + "',");
-        query.append("'" + obj.getImagen() + "'");
-        query.append(")");
+        StringBuilder query = new StringBuilder("INSERT INTO producto VALUES (");
+        query.append("'").append(obj.getProductoId()).append("',");
+        query.append("'").append(obj.getNombre()).append("',");
+        query.append("'").append(obj.getDescripcion()).append("',");
+        query.append(obj.getPrecio()).append(",");
+        query.append(obj.getCategoriaId()).append(",'");
+        query.append(obj.getImagen());
+        query.append("')");
         id = objConexion.ejecutarInsert(query.toString());
         if (id == 0) {
             throw new Exception("El registro no pudo ser insertado");
@@ -37,12 +33,12 @@ public class ProductoDaoMySQL extends ProductoDao {
         Conexion objConexion = Conexion.getOrCreate();
 
         StringBuilder query = new StringBuilder("UPDATE producto SET ");
-        query.append("nombre = '" + obj.getNombre() + "',");
-        query.append("descripcion = '" + obj.getDescripcion() + "',");
-        query.append("precio = '" + obj.getPrecio() + "',");
-        query.append("categoriaId = '" + obj.getCategoriaId() + "',");
-        query.append("imagen = '" + obj.getImagen() + "' ");
-        query.append("WHERE productoId = '" + obj.getProductoId() + "'");
+        query.append("nombre = '").append(obj.getNombre()).append("',");
+        query.append("descripcion = '").append(obj.getDescripcion()).append("',");
+        query.append("precio = ").append(obj.getPrecio()).append(",");
+        query.append("categoriaId = ").append(obj.getCategoriaId());
+        query.append("imagen = '").append(obj.getImagen()).append("',");;
+        query.append(" WHERE productoId = ").append(obj.getProductoId());
         int upd = objConexion.ejecutarSimple(query.toString());
         if (upd == 0) {
             throw new Exception("El registro no pudo ser actualizado");
@@ -54,8 +50,8 @@ public class ProductoDaoMySQL extends ProductoDao {
     @Override
     public void delete(int id) {
         Conexion objConexion = Conexion.getOrCreate();
-        StringBuffer query = new StringBuffer("DELETE FROM producto ");
-        query.append("WHERE productoId = " + id);
+        StringBuilder query = new StringBuilder("DELETE FROM producto ");
+        query.append("WHERE productoId = ").append(id);
         objConexion.ejecutarSimple(query.toString());
         objConexion.desconectar();
     }
@@ -96,7 +92,7 @@ public class ProductoDaoMySQL extends ProductoDao {
 
     @Override
     public ArrayList<Producto> getList() {
-        ArrayList<Producto> registros = new ArrayList<Producto>();
+        ArrayList<Producto> registros = new ArrayList<>();
         try {
             Conexion objConexion = Conexion.getOrCreate();
             String query = "SELECT * FROM producto";
@@ -130,7 +126,7 @@ public class ProductoDaoMySQL extends ProductoDao {
     }
 
     @Override
-    public ArrayList<Producto> getCategoria(int id) {
+    public ArrayList<Producto> getCategory(int id) {
         ArrayList<Producto> registros = new ArrayList<>();
         try {
             Conexion objConexion = Conexion.getOrCreate();
@@ -165,7 +161,7 @@ public class ProductoDaoMySQL extends ProductoDao {
     }
 
     @Override
-    public ArrayList<Producto> getlista(String ids) {
+    public ArrayList<Producto> getListFromIds(String ids) {
         ArrayList<Producto> registros = new ArrayList<>();
         try {
             Conexion objConexion = Conexion.getOrCreate();

@@ -5,21 +5,18 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-/**
- *
- * @author Jose Carlos Gutierrez
- */
 public class ConexionMySQL extends Conexion {
 
-    public static Conexion getOrCreate(){
-        if(objSingleton==null)
+    public static Conexion getOrCreate() {
+        if (objSingleton == null) {
             objSingleton = new ConexionMySQL();
+        }
         return objSingleton;
     }
 
     private ConexionMySQL() {
-        Configuracion objConfiguracion =
-                Configuracion.getConfiguracion();
+        Configuracion objConfiguracion
+                = Configuracion.getConfiguracion();
         this.host = objConfiguracion.getDbHost();
         this.dataBase = objConfiguracion.getDbName();
         this.instance = objConfiguracion.getDbInstace();

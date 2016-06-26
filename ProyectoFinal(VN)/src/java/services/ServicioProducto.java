@@ -1,9 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package Servicio;
+package services;
 
 import dao.ProductoDao;
 import dto.Producto;
@@ -17,12 +12,8 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 
-/**
- *
- * @author kevin
- */
 @Path("/producto")
-public class ServicoProducto {
+public class ServicioProducto {
 
     @GET
     @Path("/")
@@ -38,7 +29,7 @@ public class ServicoProducto {
     @Produces(MediaType.APPLICATION_JSON)
     public List<Producto> getProducto(@PathParam("id") int categoriaId) throws Exception {
         ProductoDao dao = FactoryDao.getFactoryInstance().getNewProductoDao();
-        List<Producto> productos = dao.getCategoria(categoriaId);
+        List<Producto> productos = dao.getCategory(categoriaId);
         return productos;
     }
 
@@ -51,12 +42,11 @@ public class ServicoProducto {
         FactoryDao factory = FactoryDao.getFactoryInstance();
         ProductoDao objDao = factory.getNewProductoDao();
         try {
-            result = objDao.getlista(ids);
+            result = objDao.getListFromIds(ids);
         } catch (Exception e) {
             result = new LinkedList<>();
         }
 
         return result;
     }
-
 }

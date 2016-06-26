@@ -6,10 +6,6 @@ import java.util.ArrayList;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-/**
- *
- * @author Jose Carlos Gutierrez
- */
 public class UsuarioDaoMySQL extends UsuarioDao {
 
     @Override
@@ -17,12 +13,12 @@ public class UsuarioDaoMySQL extends UsuarioDao {
         Conexion objConexion = Conexion.getOrCreate();
 
         int id = 0;
-        StringBuilder query = new StringBuilder("INSERT INTO usuario(nombreCompleto,nombreUsuario,password,direccion) VALUE (");
-//			query.append("'" + obj.getUsuarioId() + "'," );
-        query.append("'" + obj.getNombreCompleto() + "',");
-        query.append("'" + obj.getNombreUsuario() + "',");
-        query.append("'" + obj.getPassword() + "',");
-        query.append("'" + obj.getDireccion() + "'");
+        StringBuilder query = new StringBuilder("INSERT INTO usuario VALUES (");
+        query.append("'").append(obj.getUsuarioId()).append("',");
+        query.append("'").append(obj.getNombreCompleto()).append("',");
+        query.append("'").append(obj.getNombreUsuario()).append("',");
+        query.append("'").append(obj.getPassword()).append("',");
+        query.append("'").append(obj.getDireccion()).append("' ");
         query.append(")");
         id = objConexion.ejecutarInsert(query.toString());
         if (id == 0) {
@@ -37,11 +33,11 @@ public class UsuarioDaoMySQL extends UsuarioDao {
         Conexion objConexion = Conexion.getOrCreate();
 
         StringBuilder query = new StringBuilder("UPDATE usuario SET ");
-        query.append("nombreCompleto = '" + obj.getNombreCompleto() + "',");
-        query.append("nombreUsuario = '" + obj.getNombreUsuario() + "',");
-        query.append("password = '" + obj.getPassword() + "',");
-        query.append("direccion = '" + obj.getDireccion() + "' ");
-        query.append("WHERE usuarioId = '" + obj.getUsuarioId() + "'");
+        query.append("nombreCompleto = '").append(obj.getNombreCompleto()).append("',");
+        query.append("nombreUsuario = '").append(obj.getNombreUsuario()).append("',");
+        query.append("password = '").append(obj.getPassword()).append("',");
+        query.append("direccion = '").append(obj.getDireccion()).append("' ");
+        query.append("WHERE usuarioId = '").append(obj.getUsuarioId()).append("'");
         int upd = objConexion.ejecutarSimple(query.toString());
         if (upd == 0) {
             throw new Exception("El registro no pudo ser actualizado");
@@ -53,8 +49,8 @@ public class UsuarioDaoMySQL extends UsuarioDao {
     @Override
     public void delete(int id) {
         Conexion objConexion = Conexion.getOrCreate();
-        StringBuffer query = new StringBuffer("DELETE FROM usuario ");
-        query.append("WHERE usuarioId = " + id);
+        StringBuilder query = new StringBuilder("DELETE FROM usuario ");
+        query.append("WHERE usuarioId = ").append(id);
         objConexion.ejecutarSimple(query.toString());
         objConexion.desconectar();
     }
@@ -92,7 +88,7 @@ public class UsuarioDaoMySQL extends UsuarioDao {
 
     @Override
     public ArrayList<Usuario> getList() {
-        ArrayList<Usuario> registros = new ArrayList<Usuario>();
+        ArrayList<Usuario> registros = new ArrayList<>();
         try {
             Conexion objConexion = Conexion.getOrCreate();
             String query = "SELECT * FROM usuario";

@@ -1,23 +1,18 @@
 package dao;
 
-import dto.Detallepedido;
+import dto.DetallePedido;
 import java.util.ArrayList;
 
-/**
- *
- * @author Jose Carlos Gutierrez
- */
 public abstract class DetallepedidoDao {
 
-	public abstract int insert(Detallepedido obj) throws Exception;
+    public abstract int insert(DetallePedido obj) throws Exception;
 
-	public abstract void update(Detallepedido obj) throws Exception;
+    public abstract void update(DetallePedido obj) throws Exception;
 
-	public abstract void delete(int id);
+    public abstract void delete(int id);
 
-	public abstract ArrayList<Detallepedido> getList();
+    public abstract ArrayList<DetallePedido> getList();
 
-	public abstract Detallepedido get(int id);
+    public abstract DetallePedido get(int id);
 
 }
-

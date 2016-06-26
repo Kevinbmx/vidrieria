@@ -4,10 +4,6 @@ import java.io.*;
 import org.jdom.*;
 import org.jdom.input.*;
 
-/**
- *
- * @author Jose Carlos Gutierrez
- */
 public class Configuracion {
 
     private String dbHost;
@@ -26,7 +22,7 @@ public class Configuracion {
             InputStream in = Configuracion.class.getClassLoader().getResourceAsStream("config.xml");
             Document doc = builder.build(in);
             Element appConfig = doc.getRootElement();
-            Element dbConfig= appConfig.getChild("db-config");
+            Element dbConfig = appConfig.getChild("db-config");
             this.dbEngine = dbConfig.getChild("db-engine").getText();
             this.dbHost = dbConfig.getChild("db-host").getText();
             this.dbPort = dbConfig.getChild("db-port").getText();
@@ -39,9 +35,10 @@ public class Configuracion {
         }
     }
 
-    public static Configuracion getConfiguracion(){
-        if(config == null)
+    public static Configuracion getConfiguracion() {
+        if (config == null) {
             config = new Configuracion();
+        }
         return config;
     }
 

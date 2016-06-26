@@ -1,33 +1,28 @@
 package dto;
 
-/**
- *
- * @author Jose Carlos Gutierrez
- */
-public class Categoria{
+public class Categoria {
 
-	private int categoriaId;
-	private String nombreCategoria;
+    private int categoriaId;
+    private String nombreCategoria;
 
-	public Categoria(){
-		;
-	}
+    public Categoria() {
+        ;
+    }
 
-	public void setCategoriaId(int categoriaId){
-		this.categoriaId = categoriaId;
-	}
+    public void setCategoriaId(int categoriaId) {
+        this.categoriaId = categoriaId;
+    }
 
-	public int getCategoriaId(){
-		return this.categoriaId;
-	}
+    public int getCategoriaId() {
+        return this.categoriaId;
+    }
 
-	public void setNombreCategoria(String nombreCategoria){
-		this.nombreCategoria = nombreCategoria;
-	}
+    public void setNombreCategoria(String nombreCategoria) {
+        this.nombreCategoria = nombreCategoria;
+    }
 
-	public String getNombreCategoria(){
-		return this.nombreCategoria;
-	}
+    public String getNombreCategoria() {
+        return this.nombreCategoria;
+    }
 
 }
-

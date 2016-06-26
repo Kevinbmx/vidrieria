@@ -1,60 +1,55 @@
 package dto;
 
-/**
- *
- * @author Jose Carlos Gutierrez
- */
-public class Usuario{
+public class Usuario {
 
-	private int usuarioId;
-	private String nombreCompleto;
-	private String nombreUsuario;
-	private String password;
-	private String direccion;
+    private int usuarioId;
+    private String nombreCompleto;
+    private String nombreUsuario;
+    private String password;
+    private String direccion;
 
-	public Usuario(){
-		;
-	}
+    public Usuario() {
+        ;
+    }
 
-	public void setUsuarioId(int usuarioId){
-		this.usuarioId = usuarioId;
-	}
+    public void setUsuarioId(int usuarioId) {
+        this.usuarioId = usuarioId;
+    }
 
-	public int getUsuarioId(){
-		return this.usuarioId;
-	}
+    public int getUsuarioId() {
+        return this.usuarioId;
+    }
 
-	public void setNombreCompleto(String nombreCompleto){
-		this.nombreCompleto = nombreCompleto;
-	}
+    public void setNombreCompleto(String nombreCompleto) {
+        this.nombreCompleto = nombreCompleto;
+    }
 
-	public String getNombreCompleto(){
-		return this.nombreCompleto;
-	}
+    public String getNombreCompleto() {
+        return this.nombreCompleto;
+    }
 
-	public void setNombreUsuario(String nombreUsuario){
-		this.nombreUsuario = nombreUsuario;
-	}
+    public void setNombreUsuario(String nombreUsuario) {
+        this.nombreUsuario = nombreUsuario;
+    }
 
-	public String getNombreUsuario(){
-		return this.nombreUsuario;
-	}
+    public String getNombreUsuario() {
+        return this.nombreUsuario;
+    }
 
-	public void setPassword(String password){
-		this.password = password;
-	}
+    public void setPassword(String password) {
+        this.password = password;
+    }
 
-	public String getPassword(){
-		return this.password;
-	}
+    public String getPassword() {
+        return this.password;
+    }
 
-	public void setDireccion(String direccion){
-		this.direccion = direccion;
-	}
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
+    }
 
-	public String getDireccion(){
-		return this.direccion;
-	}
+    public String getDireccion() {
+        return this.direccion;
+    }
 
 }
-
