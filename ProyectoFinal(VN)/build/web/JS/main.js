@@ -22,7 +22,7 @@ $(function() {
 			SliderInit();
 
 			for(var i = 0; i < lengthSlider; i++) {
-				if (i == 0) {
+				if (i === 0) {
 					output += '<li class="active"></li>'; 
 				} else {
 					output += '<li></li>';
