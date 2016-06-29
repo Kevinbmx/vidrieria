@@ -9,19 +9,48 @@ body{
     margin: 0px auto;
 }
 
+#cancelar-ingresar{
+    margin-top: 20px;
+}
+
 .text-color-login{
     text-align: center;
-
+    margin-top: 80px;
 }
 
 
-a{
+#btnlogin{
     color: white;
     text-decoration: none;
 }
 
+#btnregistrar{
+    color: white;
+}
 
 
+
+.poner-izquierda{
+    width: 200px;
+    margin: 0px auto;
+    text-align: left;
+}
+
+.poner-izquierda a{
+    color: blue;
+    text-decoration: none;
+}
+
+
+.poner-izquierda label , .poner-izquierda input[type="text"]{
+  margin-top: 10px;
+  color: black;
+}
+
+h2{
+    text-align: center;
+    color: black;
+}
 
 input[type="text"],input[type="password"]{
     width: 200px;
@@ -40,10 +69,16 @@ input[type="text"],input[type="password"]{
     border-radius: 5px;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 5px;
+    margin-bottom: 10px;
     position: relative;
     box-sizing: border-box;
     transition: all 1000ms ease;
+    text-align: center;
 }
+
+
+
 /*
 .boton-efecto:before {
     content:'';

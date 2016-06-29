@@ -2,39 +2,27 @@
 #margen{
     margin-top: 12%;
     position: relative;
-    /*z-index: 2;*/
 }
-
-
 
 .contenedorfoto {
     float: left;
     width: 40%;
-    /* height: 180px; */
     margin: 10px;
     padding: 5px;
-    /* background-color: #f5f7f9; */
-    /* border-right: #a5a7aa solid 1px; */
-    /* border-bottom: #a5a7aa solid 1px; */
     text-align: center;
 }
 
-
-
-
-
-
+a{
+    text-decoration: none;
+}
 
 .se-tipo-letra-sub h1{
-    /*margin-top: 18%;*/
     text-align: center;
     font-family: 'JosefinSans';
     font-weight: normal;
     font-style: normal;
     line-height: 0.8;
-    /*color: white;*/
     color: #454545;
-    /*color: #ac9e84;*/
 }
 .ter-tamanho-imag img{
     width: 200px; 
@@ -42,13 +30,6 @@
 }
 .ter-margen{
     margin-top: 40px;
-
-    /*	margin-bottom: 20px;
-    padding-bottom: 30px;*/
-    /*border-bottom: solid;
-    border-width: 1px;
-    border-color: #AC9E84;
-    margin-bottom: 30px;*/
 } 
 .ter-unir-seccion{
     display: block;
@@ -64,8 +45,6 @@
 }
 
 .borde-arriba-abajo{
-    /*	padding-top: 5px;
-    padding-bottom: 5px;*/
     border-top: solid;
     border-bottom: solid;
     border-width: 1px;
@@ -80,7 +59,6 @@
     font-style: normal;
     line-height: 0.8;
     color: white;
-    /*color: #454545;*/
 }
 
 
@@ -96,31 +74,9 @@
     margin-right: auto;
     position: relative;
     box-sizing: border-box;
-    transition: all 1000ms ease;
+    transition: all 100ms ease;
     width: 100%;
 }
-
-.boton-efecto:before {
-    content:'';
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 200px;
-    height: 0px;
-    background: rgba(255,255,255,0.3);
-    border-radius: 5px;
-    transition: all 6s ease;
-}
-
-.boton-efecto:hover:before {
-    height: 42px;
-}
-
-.boton-efecto:hover {
-    background: rgba(0,0,0,0.2);
-    box-shadow: inset 0 0 0 3px #3a7999;
-}
-
 
 .precio-stilo p{
 
@@ -136,24 +92,12 @@
 }
 
 
-
-
-
-
-
-
-
-
 .contenedorfoto  img{
-    /*width: 300px; 
-    height:273px;*/
     width: 125px;
     margin-left: -40px;
 }
 
 .contenedorfoto  h2{
-    /*width: 300px; 
-    height:273px;*/
     font-family: 'JosefinSans';
     font-size: 12px;
 }
@@ -161,38 +105,12 @@
 
 
 
-
-
-
-#productos article {
-    border: 1px dotted #999;
-    border-radius: 20px;
-    padding: 10px;
-    margin: 10px;
-    width: 90%;
-    font-size: 20px;
-    text-align: center;
-    font-family: 'Conv_SourceSansPro-Light';
-}
-
-
-
-
-
-
 @media screen and (min-width: 370px){
     .contenedorfoto  img{
-        /*width: 300px; 
-        height:273px;*/
-        width: 150px;
+        width: 250px;
     }
 
 }
-
-
-
-
-
 @media screen and (min-width: 768px){
     .ter-unir{
         display: flex;
@@ -202,36 +120,18 @@
         float:left;
         margin: 10px;
         padding:5px;
-
-    }
-
-    .contenedorfoto {
-        float: left;
         width: 46%;
-        /* height: 180px; */
-        /*margin: 10px;*/
-        /*padding: 5px;*/
-        /* background-color: #f5f7f9; */
-        /* border-right: #a5a7aa solid 1px; */
-        /* border-bottom: #a5a7aa solid 1px; */
-        /*text-align: center;*/
     }
 
     .contenedorfoto  img{
-        /*width: 300px; 
-        height:273px;*/
         width: 350px;
     }
-
 
     .contenedorfoto  h2{
         font-size: 16px;
     }
 
 }
-
-
-
 
 @media screen and (min-width: 1024px){
 
@@ -241,12 +141,10 @@
     } 
 
     .ter-margen-articulo{
-        /*margin: 0px 4%;*/
         margin-left: 4%;
         margin-right: 4%;
     }
     .ter-unir{
-        /*display: flex;*/
         width: 50%;
     }
     .ter-tipo-letra a{
@@ -263,15 +161,8 @@
     }
 
     .contenedorfoto  img{
-        /*width: 300px; 
-        height:273px;*/
         width: 210px;
     }
-
-
-
-
-
 
     #principal{
         width: 980px;
@@ -286,7 +177,6 @@
 
 
     .contenedorfoto {
-
         width:21.8%;
     }
 

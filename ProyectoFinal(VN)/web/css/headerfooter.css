@@ -1,28 +1,16 @@
-body{
-    /*background: url('images/background4.png') repeat-x 0 0 transparent;*/
-    /*height: 200px;*/
+
+.unir-carrito{
+    display: flex;
+    margin-left: 10px;
 }
 
-/*.center-content{
-        margin: 0 auto;
-        }*/
-
-
-/*.fix-icono{
-        z-index: 1;
-        position: absolute;
-        left: 10%;
-        margin-top: 20%;
-        }*/
 
 .main-title{
     font-family: 'Lobster';
     font-size: 42px;
     color: white;
-    /*text-align: center;*/
 }
 nav{
-    /*background-color: white;*/
     background-color: rgba(255, 255, 255, 0.61);
     margin: 0px 10px;
     border: 1px solid #EEEEEE;
@@ -72,8 +60,6 @@ nav li a,#mobile-menu{
 }
 
 .search-textbox{
-    /*background-color: #FAFAFA;*/
-
     background-color: rgba(21, 8, 8, 0.26);
     border: 1px solid #EEEEEE;
     width: 100%;
@@ -103,32 +89,18 @@ nav li a,#mobile-menu{
     margin-right: 10px;
 }
 
-.alinear-der{
-    text-align: right;
-
-}
 
 .capa-header{
-    /*position: absolute; fixed;*/
     z-index: 1;
     width: 100%;
-    /*left: 0px;*/
-    /*margin-top: 40px;*/
 }
-.fixed{
-    /*position: fixed;*/
-    /*z-index: 1;*/
-}
+
 .fondo-slider img{
     width: 100%;
-
-    /*background-attachment: scroll;*/
-    /*position: fixed;*/
 }
 
 .fondo-slider{
     padding-top: 0px;
-    /*position: absolute;*/
 }
 
 /*-------------*/
@@ -137,8 +109,6 @@ nav li a,#mobile-menu{
 .pri-tipo-letra{
     position: relative;
     padding-top: 20px;
-    /* color: white; */
-    /* margin-top: -30%; */
     background: rgba(172, 158, 132, 0.34);
     margin-left: 5px;
     margin-right: 5px;
@@ -152,7 +122,6 @@ nav li a,#mobile-menu{
     font-style: normal;
     line-height: 0.8;
     color: white;
-    /*color: #454545;*/
 }
 .pri-tipo-letra h1{
     font-size: 22px;
@@ -191,21 +160,11 @@ nav li a,#mobile-menu{
 }
 
 
-
-
-/*-----------------*/
-
-
 /*footer*/
 
 
 .page-footer{
     margin-top: 30px;
-
-    /*background-color: #05939D;*/
-    /*background-color: rgba(248,248,248,0.8);*/
-    /*background-color: #BBAC97;*/
-    /*background-color: #C6B397;*/
     background-color: #474747;
     border-radius: 2px;
     padding-top: 20px;
@@ -220,19 +179,16 @@ nav li a,#mobile-menu{
 
 .footer-text {
     color: #FFFFFF;
-    /*color: #454545;*/
     font-size: 11px;
 }
 
 .page-footer span{
     color:#C3C3C3;
-    /*color: #454545;*/
 }
 
 .quitar a{
     text-decoration: none;
     color: #FFFFFF;
-    /*color: #454545;*/
     font-size: 11px;
 }
 
@@ -270,8 +226,6 @@ nav li a,#mobile-menu{
 
 
     .pri-tipo-letra{
-        /*position: relative;*/
-        /*color: white;*/
         margin-top: -20%;
     }
     .pri-tipo-letra h1 , .pri-tipo-letra p , .pri-tipo-letra h3{

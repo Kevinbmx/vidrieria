@@ -1,57 +1,58 @@
 
 #margen{
-	margin-top: 12%;
-	position: relative;
+    margin-top: 12%;
+    position: relative;
 }
+
 
 
 
 .se-tipo-letra-sub h1{
-	text-align: center;
-	font-family: 'JosefinSans';
-	font-weight: normal;
-	font-style: normal;
-	line-height: 0.8;
-	color: #454545;
+    text-align: center;
+    font-family: 'JosefinSans';
+    font-weight: normal;
+    font-style: normal;
+    line-height: 0.8;
+    color: #454545;
 }
 .ter-tamanho-imag img{
-	width: 200px; 
-	height:173px;
+    width: 200px; 
+    height:173px;
 }
 .ter-margen{
-	margin-top: 40px;
+    margin-top: 40px;
 
 
 } 
 .ter-unir-seccion{
-	display: block;
+    display: block;
 }
 
 
 .ter-unir{
-	text-align: center;
+    text-align: center;
 }
 .ter-tamanho-seccion{
-	width: 100%;
-	margin-bottom: 20px;
+    width: 100%;
+    margin-bottom: 20px;
 }
 
 .borde-arriba-abajo{
 
-	border-top: solid;
-	border-bottom: solid;
-	border-width: 1px;
-	border-color: #AC9E84;
+    border-top: solid;
+    border-bottom: solid;
+    border-width: 1px;
+    border-color: #AC9E84;
 
 }
 
 .pri-tipo-letra p{
-	text-align: center;
-	font-family: 'JosefinSans';
-	font-weight: normal;
-	font-style: normal;
-	line-height: 0.8;
-	color: white;
+    text-align: center;
+    font-family: 'JosefinSans';
+    font-weight: normal;
+    font-style: normal;
+    line-height: 0.8;
+    color: white;
 
 }
 
@@ -64,37 +65,37 @@
 
 
 @media screen and (min-width: 768px){
-	.ter-unir{
-		display: flex;
-		text-align: center;
-	}
+    .ter-unir{
+        display: flex;
+        text-align: center;
+    }
 }
 
 @media screen and (min-width: 1024px){
 
-	.ter-unir-seccion{
-		display: flex;
+    .ter-unir-seccion{
+        display: flex;
 
-	} 
+    } 
 
-	.ter-margen-articulo{
-		margin-left: 4%;
-		margin-right: 4%;
-	}
-	.ter-unir{
-		width: 50%;
-	}
-	.ter-tipo-letra a{
-		font-family: 'HelveticaNeue';
-		font-size: 16px;
-		color: #AC9E84;
-		text-decoration: none;
-		
-	}
+    .ter-margen-articulo{
+        margin-left: 4%;
+        margin-right: 4%;
+    }
+    .ter-unir{
+        width: 50%;
+    }
+    .ter-tipo-letra a{
+        font-family: 'HelveticaNeue';
+        font-size: 16px;
+        color: #AC9E84;
+        text-decoration: none;
 
-	.color-fondo{
-		background: rgba(172, 158, 132, 0.34);
-		width: 100%;
-	}
+    }
+
+    .color-fondo{
+        background: rgba(172, 158, 132, 0.34);
+        width: 100%;
+    }
 
 }

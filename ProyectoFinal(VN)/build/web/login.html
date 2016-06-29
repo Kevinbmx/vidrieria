@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="css/login.css" type="text/css">
     </head>
     <body>
-        <div class="center-content">
+        <div id="panerl-ingresar" class="center-content">
             <form class="text-color-login">
                 <h2 class="">Ingresar</h2>
                 <input type="text" id="username" class="" placeholder="Nombre de Usuario" autofocus>
@@ -16,11 +16,43 @@
                 <input type="password" id="password" class="" placeholder="Contraseña" required>
                 <br>
                 <div class="boton-efecto">
-                    <a  id="btnlogin" >Entrar</a>
+                    <a  id="btnlogin" >Ingresar</a>
+                </div>
+                <div class="poner-izquierda">
+                    <a id="registrar" href="javascript:registrar()">¿Quieres Registrarse?</a>
+                    <br>
+                    <a id="cancelar-ingresar" href="index.html">cancelar</a>
                 </div>
             </form>
         </div> 
+
+        <div id="panel-registrar"  class="center-content" style="display: none;">
+            <div class="poner-izquierda">
+                <h2 class="">Registrar</h2>
+                <input type="hidden" id="contacto-id" value="0">
+                <label>Nombre Completo</label>
+                <br>
+                <input type="text" id="Nombre-completo"  placeholder="Nombre Completo">
+                <br>
+                <label>Nombre Usuario</label>
+                <br>
+                <input type="text" id="Nombre-Usuario"  placeholder="Nombre Usuario">
+                <br>
+                <label>Direccion</label>
+                <br>
+                <input type="text" id="Direccion"  placeholder="Direccion">
+                <br>
+                <label>Contraseña</label>
+                <br>
+                <input type="password" id="contraseña" placeholder="contraseña">
+                <div class="boton-efecto">
+                    <a  id="btnregistrar" >Registrar</a>
+                </div>
+                <div class="poner-izquierda">
+                    <a id="cancelar" href=" javascript:ingresar()">cancelar</a>
+                </div>
+            </div>
+        </div>
         <script type="text/javascript" src="js/jquery-2.1.4.js"></script>
         <script src="js/login.js" type="text/javascript"></script>
-
 </html>
