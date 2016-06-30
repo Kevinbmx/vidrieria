@@ -107,7 +107,13 @@ a{
 
 @media screen and (min-width: 370px){
     .contenedorfoto  img{
-        width: 250px;
+        width: 150px;
+    }
+
+}
+@media screen and (min-width: 425px){
+    .contenedorfoto  img{
+        width: 170px;
     }
 
 }
