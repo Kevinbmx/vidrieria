@@ -78,6 +78,10 @@ a{
     width: 100%;
 }
 
+.boton-efecto a{
+ color: white;   
+}
+
 .precio-stilo p{
 
     margin: 0px;

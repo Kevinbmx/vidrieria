@@ -1,5 +1,6 @@
 $(document).ready(function () {
     loadCart();
+//    mas();
 });
 
 function loadCart() {
@@ -26,17 +27,29 @@ function loadCart() {
     return false;
 }
 
-//function comprar(idPro, precioPro) {
-////    if (!sessionStorage.getItem("usuario")) {
-////        window.location.href = "login.html";
-////    } else {
-//        var id = idPro;
-//        var carrito = JSON.parse(localStorage.getItem("carrito"));
-//        if (carrito[id]) {
-//            carrito[id].subTotal;
-//        } else {
-//            carrito[id] = {pedidoId: 0, productoId: idPro, cantidad: 1, precio: precioPro, subTotal: precioPro};
-//        }
-//        localStorage.setItem("carrito", JSON.stringify(carrito));
-////    }
+var cantidad = 0;
+
+function mas() {
+
+    $("#mas").click(function (e) {
+        cantidad++;
+        var precio = $("#precio").text();
+        var precioTotal = cantidad * precio;
+        $("#precioTotal").text('');
+        $("#precioTotal").text(precioTotal);
+    });
+
+}
+
+//function menos() {
+//
+//    $("#menos").click(function (e) {
+//        cantidad--;
+//        var precio = $("#precio").text();
+//        var precioTotal = cantidad * precio;
+//        $("#precioTotal").text('');
+//        $("#precioTotal").text(precioTotal);
+//    });
+//
 //}
+

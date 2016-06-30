@@ -54,10 +54,6 @@
 
         </header>
 
-        <section >
-
-        </section>
-
         <section class="fondo-slider">
             <img src="img/fondo.png" alt="">
         </section>
@@ -98,9 +94,16 @@
                     <img src="<%= imagen %>" alt="<%= nombre %>">                    
                     </figure>
                     </div>
+                    <div class="precio-stilo">
+                    <p id="precio" data-productoId="<%= productoId %>"><%= precio %></p>
+                    </div>
+                    <div class="medida-boton">
+                        <button id="mas"  onclick="mas()"><strong>+</strong></button>
+                        <button id="menos"  onclick="menos()"><strong>-</strong></button>
+                    </div>
                     <p>
-                    <label>Cantidad:</label>
-                    <input id="<%= productoId %>" class="textCant" type="text" placeholder="Cantidad" >
+                    <label>precio Total:</label>
+                    <label id="precioTotal"></label>
                     </p>
                     <div class="boton-efecto">
                     <a  id="btnlogin" >Eliminar</a>

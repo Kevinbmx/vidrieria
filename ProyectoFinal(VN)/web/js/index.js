@@ -6,8 +6,6 @@ $(document).ready(function () {
         document.getElementById('logout').style.display = 'none';
         document.getElementById('login').style.display = 'block';
     }
-
-    localStorage.removeItem("favorito");
 });
 
 function logout() {
