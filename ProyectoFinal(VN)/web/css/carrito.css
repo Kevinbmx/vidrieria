@@ -59,7 +59,7 @@
     width: 100%;
 }
 
-.boton-efecto:before {
+/*.boton-efecto:before {
     content:'';
     position: absolute;
     top: 0px;
@@ -78,7 +78,7 @@
 .boton-efecto:hover {
     background: rgba(0,0,0,0.2);
     box-shadow: inset 0 0 0 3px #3a7999;
-}
+}*/
 
 .boton-efecto a {
     color: white;
@@ -100,6 +100,7 @@
 
     .contenedorfoto  img{
         width: 150px;
+        /*margin-left:  -40px;*/
     }
 
 

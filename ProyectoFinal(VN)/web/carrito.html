@@ -87,7 +87,7 @@
         <section id="prod" class="center-content" >
             <div id="principal">
                 <script type="text/template" id="product-template">            
-                    <div class="contenedorfoto pro" data-productoId="<%= productoId %>>
+                    <div class="contenedorfoto pro" data-productoId="<%= productoId %>">
                     <h2 data-productoId="<%= productoId %>"><%= nombre %></h2>
                     <div>
                     <figure data-productoId="<%= productoId %>">
@@ -95,29 +95,28 @@
                     </figure>
                     </div>
                     <div class="precio-stilo">
-                    <p id="precio" data-productoId="<%= productoId %>"><%= precio %></p>
+                    <p id="precio<%= productoId %>" data-productoId="<%= productoId %>"><%= precio %></p>
                     </div>
                     <div class="medida-boton">
-                        <button id="mas"  onclick="mas()"><strong>+</strong></button>
-                        <button id="menos"  onclick="menos()"><strong>-</strong></button>
+                    <button  onclick="mas(<%= productoId %>)"><strong>+</strong></button>
+                    <button  onclick="menos(<%= productoId %>)"><strong>-</strong></button>
                     </div>
                     <p>
+                    <label>Cantidad:</label>
+                    <label id="cantidad<%= productoId %>"></label>
+                    </p>
+                    <p>
                     <label>precio Total:</label>
-                    <label id="precioTotal"></label>
+                    <label id="total<%= productoId %>"</label>
                     </p>
                     <div class="boton-efecto">
-                    <a  id="btnlogin" >Eliminar</a>
+                    <a  id="btnlogin" onclick="eliminar(<%= productoId %>)">Eliminar</a>
                     </div>
                     </div>
-
                 </script>
             </div>
         </section>
 
-
-
-
-        <!--<input type="number"/>-->
         <footer class="page-footer">
             <div class="center-content footer-content footer-text">
                 <div class=" ">
