@@ -20,9 +20,7 @@ $(document).ready(function () {
             }
         }
     });
-
 });
-
 
 function carrito(idPro, precioPro) {
     var id = idPro;
