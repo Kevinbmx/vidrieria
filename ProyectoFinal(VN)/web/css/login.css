@@ -2,7 +2,6 @@ body{
     background: rgba(172, 158, 132, 0.1);
 }
 
-
 .center-content{
 
     width: 300px;
@@ -22,6 +21,11 @@ body{
 #btnlogin{
     color: white;
     text-decoration: none;
+    font-family: 'JosefinSans';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 20px;
+    cursor: pointer;
 }
 
 #btnregistrar{
@@ -43,13 +47,17 @@ body{
 
 
 .poner-izquierda label , .poner-izquierda input[type="text"]{
-  margin-top: 10px;
-  color: black;
+    margin-top: 10px;
+    color: black;
 }
 
 h2{
     text-align: center;
     color: black;
+    font-family: 'JosefinSans';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 35px;
 }
 
 input[type="text"],input[type="password"]{
@@ -101,3 +109,9 @@ input[type="text"],input[type="password"]{
     box-shadow: inset 0 0 0 3px #3a7999;
 }*/
 
+#registrar,#cancelar-ingresar{
+    font-family: 'JosefinSans';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 16px;
+}

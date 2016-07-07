@@ -1,0 +1,21 @@
+.negro,.capa-header,.fondo-slider{
+    display: none;
+}
+.pri-borde{
+    border-bottom: none;
+}
+
+#margen {
+    margin-top: 0px;
+    /*position: relative;*/
+}
+
+.page-footer{
+    margin-top: 80px;
+}
+#prod{
+    margin-bottom: 50px;
+}
+#botonComprar{
+    display: none;
+}

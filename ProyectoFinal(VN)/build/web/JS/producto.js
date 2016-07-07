@@ -3,7 +3,7 @@ $(document).ready(function () {
         (localStorage.setItem("carrito", "{}"));
     }
 
-    $(".pro").remove();
+//    $(".pro").remove();
     $.ajax({
         type: 'GET',
         dataType: 'json',

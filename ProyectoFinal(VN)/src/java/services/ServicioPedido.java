@@ -4,6 +4,7 @@ import dao.DetallepedidoDao;
 import dao.PedidoDao;
 import dto.ContenedorPedido;
 import dto.DetallePedido;
+import dto.Pedido;
 import factory.FactoryDao;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.POST;
@@ -32,6 +33,20 @@ public class ServicioPedido {
 
         } catch (Exception ex) {
             return new SimpleResponse(false, "Error al insertar el Pedido");
+        }
+        return new SimpleResponse();
+    }
+
+    @Path("/insertar")
+    @POST
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    public SimpleResponse insertarPedido(Pedido pedido) {
+        PedidoDao dao = FactoryDao.getFactoryInstance().getNewPedidoDao();
+        try {
+            dao.insert(pedido);
+        } catch (Exception ex) {
+            return new SimpleResponse(false, "Error al insertar el pedido");
         }
         return new SimpleResponse();
     }
